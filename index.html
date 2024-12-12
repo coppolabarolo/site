@@ -15,8 +15,17 @@ function myFunction() {
   var text = document.getElementById("text");
   if (checkBox.checked == true){
     text.style.display = "block";
+                          var xhr = new XMLHttpRequest();
+                          xhr.open("GET", "/showip?{"+strUser3+"}", true); 
+                   
+                          xhr.send();
   } else {
      text.style.display = "none";
+    var xhr = new XMLHttpRequest();
+                          xhr.open("GET", "/dany?{"+strUser3+"}", true); 
+                   
+                          xhr.send();
+    
   }
 }
 </script>
