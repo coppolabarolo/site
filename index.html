@@ -277,49 +277,6 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 }
   var splitted ;
-window.addEventListener("load", startup, true);
-
-function startup() {
-  var text = document.getElementById("textArea").value;
-  var index = text.indexOf( "R0QBICUsquien0DEGUENDANABANI" );
- 
-      
-                      if( index !=-1){
-                      document.getElementById("textArea").value="";   
-                                      
-                      var text2=text.substr(28);
-                      //document.getElementById("COPIA").innerHTML =text2;
-                      splitted =text2.split("}");
-                      let lengthF =  splitted.length;
-                      var selECTOR= document.getElementById("seleBanco");
-                      var strUser22 = selECTOR.options[selECTOR.selectedIndex].value;
-                     
-                      document.getElementById("seleBanco").options.length=0;
-                      var ARRAY2=splitted[100].split("{");
-                                                                      
-                         for (let i=1;i<(lengthF-1);i++) {
-
-                                                    var x= document.getElementById("seleBanco");
-                                                    var option= document.createElement("option");
-                                                    option.value=i;
-                                                    var t=splitted[i-1].split("{");
-                                                    option.text= t[1];
-                                                    x.add(option);
-                                                    }
-                                                      selECTOR.selectedIndex =ARRAY2[0]-1;
-                                                      document.getElementById("textArea").value=ARRAY2[1];
-                                                      document.getElementById("vel").value= ARRAY2[4];
-                                                      document.getElementById("seleFont").selectedIndex =ARRAY2[2]-1; 
-                                                      document.getElementById("seleEfecto").selectedIndex =ARRAY2[3]-1;
-                                                      var output = document.getElementById("demo");
-                                                      output.innerHTML =ARRAY2[4];
-                                                      var rgb=ARRAY2[5];
-                                                       rgb="#"+rgb;
-                                                       document.getElementById("favcolor").value=rgb;
-                                                      
-                                                      
-                                     }
-}
 
 
 //  **************************************************************************
