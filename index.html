@@ -303,11 +303,7 @@ div.ex2 {
         xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
           //  const myObj = JSON.parse(this.responseText);
-            const myObj = new Object();
- myObj .id = "esp32_01";
- myObj .edad = 12;
- myObj .mascota = "Gato";
- 
+
 //var myString = JSON.stringify(miObjeto);
 
 
@@ -324,7 +320,11 @@ div.ex2 {
         };
 
  
-
+            const myObj = new Object();
+ myObj .id = "esp32_01";
+ myObj .edad = 12;
+ myObj .mascota = "Gato";
+ 
 	   
         xmlhttp.open("POST", myObj,true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
