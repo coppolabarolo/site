@@ -16,13 +16,13 @@ function myFunction() {
   if (checkBox.checked == true){
     text.style.display = "block";
                           var xhr = new XMLHttpRequest();
-                          xhr.open("GET", "/showip?{"+strUser3+"}", true); 
+                          xhr.open("GET", "/showip?{}", true); 
                    
                           xhr.send();
   } else {
      text.style.display = "none";
     var xhr = new XMLHttpRequest();
-                          xhr.open("GET", "/dany?{"+strUser3+"}", true); 
+                          xhr.open("GET", "/dany?{}", true); 
                    
                           xhr.send();
     
