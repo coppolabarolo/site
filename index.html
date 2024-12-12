@@ -1,25 +1,528 @@
+
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+ <title>LETREROS GDL</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-<p>Display EL CAQUINO some text when the checkbox is checked:</p>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-<label for="myCheck">Checkbox:</label> 
-<input type="checkbox" id="myCheck" onclick="myFunction()">
+/* Style the header */
+header {
+  background-color: #E84E0F;
+  padding: 1px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
 
-<p id="text" style="display:none">Checkbox is CHECKED!</p>
 
-<script>
-function myFunction() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
+article {
+  float: left;
+  padding: 1px;
+  width: 100%;
+  background-color: #f1f1f1;
+ 
+  height: 450px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #E84E0F;
+  padding: 1px;
+  text-align: center;
+  color: white;
+   font-size: 14px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
   }
 }
+textarea {
+  width: 100%;
+  height: 90px;
+  padding: 1px 2px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 16px;
+  resize: yes;
+}
+
+div.ex1 {
+  width: 500px;
+  padding: 6px 6px;
+  background-color: #f1f1f1;
+   
+}
+
+div.ex2 {
+  width: 70%;
+  padding: 6px 4px;
+  background-color: #f1f1f1;
+  margin-left: 20px;
+  display: flex;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+</style>
+</head>
+<body>
+ <header>
+  <p>)rawliteral";
+ const char cabeza[] PROGMEM = R"rawliteral(</p>
+</header>
+
+
+<div id="mySidebar" class="sidebar">
+
+<div class="ex2">
+               
+                <div class="ex1">
+                  <label for="fname">192.168. </label>
+                  <input type="text" id="IP1" name="fname" maxlength="3" size="4">
+                  <label for="lname">.</label>
+                  <input type="text" id="IP2" name="lname" maxlength="3" size="4"><br><br>
+                  <button id="botonIP">GUARDAR IP</button>
+                </div>
+                <div class="ex1"> 
+                <button id="botonCloseIp" >CERRAR</button></div>
+               
+</div>
+<div class="ex2">
+
+                   <div class="ex1">
+                  <label for="fname">NOMBRE </label>
+                  <input type="text" id="Nombre" name="fname" maxlength="40" size="20">
+                     </div>
+                   <div class="ex1">
+                  <button id="botonNombre">CAMBIAR NOMBRE</button>
+                  </div>
+</div>
+<div class="ex2">
+                  <div class="ex1">
+                  <select name="configColor"  id="configColor"   >
+                                           <option value="1">COLOR NORMAL</option>
+                                           <option value="2">COLOR INVERTIDO</option>          
+                </select>
+                </div>
+                <div class="ex1">
+                   <button id="botonConfigColor">ENVIAR COLOR</button>
+                  </div>
+</div>
+
+<div class="ex2">
+                  <div class="ex1">
+                  <select name="SHOWIP"  id="showIp"   >
+                                           <option value="1">OCULTAR IP</option>
+                                           <option value="2">MOSTRAR IP Y MAC</option>          
+                </select>
+                 </div>
+                     <div class="ex1">
+                   <button id="botonShowIp">ENVIAR</button>
+                  </div>
+</div>
+</div>
+
+
+
+<section>
+
+  
+  <article>
+ <div class="ex2">
+                <div class="ex1">
+                <select name="inputBanco"  id="seleBanco"  onchange="SelectBanco()" >
+                                           <option value="1">CARGANDO...</option>
+                                                  
+                </select>
+                 </div>
+                 <div class="ex1"> 
+                <button id="botonEnviar" >MODIFICAR RUTA</button></div>
+                </div>
+                 
+   </div>
+
+    <div class="ex2">
+                <div class="ex1"> 
+                <button id="botonipconfig" >CONFIG</button>
+                </div>
+                <div class="ex1"> 
+                <button id="botonactualizar"  onclick="location.reload()" >ACTUALIZAR</button>
+                </div>
+                 
+   </div>
+  
+             <textarea id="textArea" name="inputText" rows="5" cols="38" maxlength="100"  placeholder="Escribe aqui el texto">)rawliteral";
+             
+             
+             const char fin_html[] PROGMEM = R"rawliteral(</textarea> <br><br>
+
+ <div class="ex2">
+                <div class="ex1">
+                     <label for="fonts">FONTS:</label>
+                     <select id="seleFont" name="inputFont">
+                     
+                     <option value="1">ARIAL</option>
+                     <option value="2">CALIBRI</option>
+                     <option value="3">TAHOMA</option>
+                     <option value="4">TAHOMA 8</option>
+                     <option value="5">ARIAL 6p</option>
+                     <option value="6">FREESERIF</option>
+                     </select>
+                </div>
+                <div class="ex1">
+                     <label for="efects">EFECTOS:</label>
+                     <select id="seleEfecto" name="inputEfect">
+                     <option value="1">ESTATICO</option>
+                     <option value="2">DER-IZQ</option>
+                     <option value="3">IZQ-DER</option> 
+                     </select>
+                </div>          
+</div>       
+
+ <div class="ex2">
+                <div class="ex1">
+                 <label for="favcolor">SELECCIONA EL COLOR:</label>
+                 <input type="color" id="favcolor" name="inputColor" value="#ff0000"><br><br>
+                </div> 
+
+              <div class="ex1" >
+              <input type="range" min="1" max="100" value="50" class="slider" id="vel">
+   
+               <p>Velocidad %: <span id="demo"></span></p>
+        </div> 
+ </div>  
+
+ 
+ <div class="ex2">
+             
+
+               <div class="ex1">
+                     <label for="efects">COLORES:</label>
+                     <select id="seleColor"  onchange="cambiarColor(value, 'favcolor');" name="inputCHOLOR">
+                     <option value="#FF0000">ROJO</option>
+                     <option value="#00ff00">VERDE</option>
+                     <option value="#0000ff">AZUL</option> 
+                     
+                      <option value="#FF4500">NARANJA1</option>
+                     <option value="#FFff00">AMARILLO</option>
+                     <option value="#00FFff">AQUA</option> 
+                     <option value="#ff00ff">FUCHSIA</option> 
+                     <option value="#ffffff">BLANCO</option> 
+                     <option value="#FFA500">NARANJA 2</option>
+                     <option value="#FF1493">DEEP PINK</option> 
+                     <option value="#FF69B4">HOT PINK</option> 
+                     <option value="#800080">PURPLE</option> 
+                     </select>
+                </div>   
+
+                       <div class="ex1"> 
+                <button id="botonReset" >REINICIAR</button></div>
+                </div>
+                
+                 
+   </div>
+
+
+
+
+
+ 
+ </article>
+ <footer><p>LETREROS GDL 3327065458
+ </p>
+ </footer>
+  
+</section>
+
+
+<script>
+
+var slider = document.getElementById("vel");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+  var splitted ;
+window.addEventListener("load", startup, true);
+
+function startup() {
+  var text = document.getElementById("textArea").value;
+  var index = text.indexOf( "R0QBICUsquien0DEGUENDANABANI" );
+ 
+      
+                      if( index !=-1){
+                      document.getElementById("textArea").value="";   
+                                      
+                      var text2=text.substr(28);
+                      //document.getElementById("COPIA").innerHTML =text2;
+                      splitted =text2.split("}");
+                      let lengthF =  splitted.length;
+                      var selECTOR= document.getElementById("seleBanco");
+                      var strUser22 = selECTOR.options[selECTOR.selectedIndex].value;
+                     
+                      document.getElementById("seleBanco").options.length=0;
+                      var ARRAY2=splitted[100].split("{");
+                                                                      
+                         for (let i=1;i<(lengthF-1);i++) {
+
+                                                    var x= document.getElementById("seleBanco");
+                                                    var option= document.createElement("option");
+                                                    option.value=i;
+                                                    var t=splitted[i-1].split("{");
+                                                    option.text= t[1];
+                                                    x.add(option);
+                                                    }
+                                                      selECTOR.selectedIndex =ARRAY2[0]-1;
+                                                      document.getElementById("textArea").value=ARRAY2[1];
+                                                      document.getElementById("vel").value= ARRAY2[4];
+                                                      document.getElementById("seleFont").selectedIndex =ARRAY2[2]-1; 
+                                                      document.getElementById("seleEfecto").selectedIndex =ARRAY2[3]-1;
+                                                      var output = document.getElementById("demo");
+                                                      output.innerHTML =ARRAY2[4];
+                                                      var rgb=ARRAY2[5];
+                                                       rgb="#"+rgb;
+                                                       document.getElementById("favcolor").value=rgb;
+                                                      
+                                                      
+                                     }
+}
+
+
+//  **************************************************************************
+ document.getElementById("botonShowIp").addEventListener("click",SHOWIP);
+function SHOWIP() {
+                          var sel3 = document.getElementById("showIp");
+                          var strUser3 = sel3.options[sel3.selectedIndex].value;
+                          var xhr = new XMLHttpRequest();
+                          xhr.open("GET", "/showip?{"+strUser3+"}", true); 
+                   
+                          xhr.send();
+                    
+}
+
+
+ document.getElementById("botonConfigColor").addEventListener("click",CONFIGCOLOR);
+function CONFIGCOLOR() {
+                          var sel3 = document.getElementById("configColor");
+                          var strUser3 = sel3.options[sel3.selectedIndex].value;
+                          var xhr = new XMLHttpRequest();
+                          xhr.open("GET", "/configcolor?{"+strUser3+"}", true); 
+                   
+                          xhr.send();
+         
+       
+  
+
+                     
+} 
+//  *************************************************************************
+function SelectBanco() {
+                          var sel2 = document.getElementById("seleBanco");
+                          var strUser2 = sel2.options[sel2.selectedIndex].value;
+                          var ARRAY=splitted[strUser2-1].split("{");
+                          var output = document.getElementById("demo");
+                              output.innerHTML =ARRAY[4];
+   
+                              var rgb=ARRAY[5];
+                              var num=ARRAY[0];
+    
+                                  rgb="#"+rgb;
+                          document.getElementById("textArea").value=ARRAY[1];
+                          document.getElementById("vel").value= ARRAY[4];
+                          document.getElementById("seleFont").selectedIndex =ARRAY[2]-1; 
+                          document.getElementById("seleEfecto").selectedIndex =ARRAY[3]-1; 
+
+                          document.getElementById("favcolor").value=rgb;
+   
+                          var xhr = new XMLHttpRequest();
+                          xhr.open("GET", "/leer?{"+num+"}", true); 
+                   
+                          xhr.send();
+         
+       
+  
+
+                     
+} 
+
+function cambiarColor(color, idElemento) 
+{
+  var el = document.getElementById(idElemento);
+  el.value= color;
+}
+
+ 
+
+ document.getElementById("botonIP").addEventListener("click",ipconfig);
+function ipconfig(){   
+  
+   var ip1 = document.getElementById("IP1").value;
+   var ip2 = document.getElementById("IP2").value; 
+   var valoresAceptados = /^[0-9]+$/;
+   
+       if ((ip1.match(valoresAceptados))&&(ip2.match(valoresAceptados))){
+
+
+                        if (    ((ip1>0)&&(ip1<255)) && ((ip2>0)&&(ip2<255))  )   {
+                       
+                       var xhr = new XMLHttpRequest();
+                       xhr.open("GET", "/ipconfig?{192.168."+ip1+"."+ip2+".}", true); 
+                       xhr.send();
+                        }
+                      else{ alert ("INGRESA SOLO 1-254");
+                      }
+            
+          
+          
+       } else {
+         alert ("INGRESA SOLO NUMEROS");
+         
+         
+      }
+                       
+  
+} 
+
+
+
+document.getElementById("botonCloseIp").addEventListener("click", closeip);
+function closeip() { 
+                       document.getElementById("mySidebar").style.width = "0";
+             
+}
+
+document.getElementById("botonipconfig").addEventListener("click", botonipconfig);
+function botonipconfig() { 
+                       document.getElementById("mySidebar").style.width = "100%";
+                       
+}
+
+document.getElementById("botonReset").addEventListener("click", resetin);
+function resetin() { 
+
+                       var xhr = new XMLHttpRequest();
+                       
+                      xhr.open("GET", "/reset?{reset}", true); 
+                   
+                     xhr.send();
+  
+}
+
+document.getElementById("botonNombre").addEventListener("click", nombre);
+
+function nombre(){
+
+                 var text = document.getElementById("Nombre").value;
+
+                 if(text!=""){
+
+                             var xhr = new XMLHttpRequest();
+                       
+                             xhr.open("GET", "/nombre?{"+text+"}", true); 
+                   
+                             xhr.send();
+                  
+                 }
+               else{
+
+                  alert("no hay texto");
+               }
+
+  
+}
+
+document.getElementById("botonEnviar").addEventListener("click", enviar);
+
+function enviar() {   var text = document.getElementById("textArea").value;
+                          var re = /{/gi;
+                        text = text.replace(re, "");
+                         var re2 = /}/gi;
+                        text = text.replace(re2, "");
+
+          if(text!=""){  
+                       //var enable = document.getElementById("miCheckBox").checked;  
+                       var banco = document.getElementById("seleBanco").value;
+                       var font = document.getElementById("seleFont").value;
+                       var efecto = document.getElementById("seleEfecto").value;
+                       var velocidad = document.getElementById("vel").value;
+                       var colorChangeBG = document.getElementById("favcolor").value;  
+                       var colortemp=colorChangeBG[1]+colorChangeBG[2]+colorChangeBG[3]+colorChangeBG[4]+colorChangeBG[5]+colorChangeBG[6];
+                       var xhr = new XMLHttpRequest();
+                       
+                       //xhr.open("GET", "/chaca?"+banco+"{"+text+"{"+font+"{"+efecto+"}", true); 
+                       xhr.open("GET", "/escribir?{"+banco+"{"+text+"{"+font+"{"+efecto+"{"+velocidad+"{"+colortemp+"}", true); 
+                       xhr.send();
+          }
+          else{ alert("DEBES ESCRIBIR EL TEXTO"); }
+
+          
+}
+
+document.getElementById("botonEnable").addEventListener("click", enable1);
+
+function enable1() {
+    var y=0;
+
+if (document.getElementById("miCheckBox").checked)
+{
+
+   y=1;
+}
+else
+{
+
+y=0;
+}
+ 
+    var xx = document.getElementById("seleBanco").value;
+    var xhr = new XMLHttpRequest();
+                       
+                      xhr.open("GET", "/enable?{"+y+"{"+xx+"}", true); 
+                    // xhr.open("GET", "/ertye?{0{3}", true); 
+                     xhr.send();
+     
+  
+}
+
+
+
+
 </script>
 
-</body>
-</html>
+  
+</body></html>
