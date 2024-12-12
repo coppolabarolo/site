@@ -222,6 +222,20 @@ div.ex2 {
    
                <p>Velocidad %: <span id="demo"></span></p>
         </div> 
+	   <!-- Buttons for controlling the LEDs on Slave 2. ************************** -->
+          <h4 class="LEDColor"><i class="fas fa-lightbulb"></i> LED 1</h4>
+          <label class="switch">
+            <input type="checkbox" id="ESP32_01_TogLED_01" onclick="GetTogBtnLEDState('ESP32_01_TogLED_01')">
+            <div class="sliderTS"></div>
+          </label>
+          <h4 class="LEDColor"><i class="fas fa-lightbulb"></i> LED 2</h4>
+          <label class="switch">
+            <input type="checkbox" id="ESP32_01_TogLED_02" onclick="GetTogBtnLEDState('ESP32_01_TogLED_02')">
+            <div class="sliderTS"></div>
+          </label>
+          <!-- *********************************************************************** -->
+        </div>  
+        <!-- ======================================================================================================= -->
  </div>  
 
  
