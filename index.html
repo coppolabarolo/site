@@ -11,14 +11,10 @@
 
 <script>
 
-var data= '{"employees":[' +
-'{"firstName":"John","lastName":"Doe" },' +
-'{"firstName":"Anna","lastName":"Smith" },' +
-'{"firstName":"Peter","lastName":"Jones" }]}';
-
-json = JSON.parse(data);
-window.alert(JSON.stringify(json));
-  
+const myJSON = '{"name":"John", "age":30, "car":null}';
+const myObj = JSON.parse(myJSON);
+//document.getElementById("demo").innerHTML = myObj.name;
+  console.log(myObj);
 function myFunction() {
   var checkBox = document.getElementById("myCheck");
   var text = document.getElementById("text");
