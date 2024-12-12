@@ -304,28 +304,18 @@ div.ex2 {
           if (this.readyState == 4 && this.status == 200) {
             const myObj = JSON.parse(this.responseText);
             if (myObj.id == "esp32_01") {
-              document.getElementById("ESP32_01_Temp").innerHTML = myObj.temperature;
-              document.getElementById("ESP32_01_Humd").innerHTML = myObj.humidity;
-              document.getElementById("ESP32_01_Status_Read_DHT11").innerHTML = myObj.status_read_sensor_dht11;
-              document.getElementById("ESP32_01_LTRD").innerHTML = "Time : " + myObj.ls_time + " | Date : " + myObj.ls_date + " (dd-mm-yyyy)";
-              if (myObj.LED_01 == "ON") {
+              
                 document.getElementById("ESP32_01_TogLED_01").checked = true;
-              } else if (myObj.LED_01 == "OFF") {
+         
                 document.getElementById("ESP32_01_TogLED_01").checked = false;
-              }
-              if (myObj.LED_02 == "ON") {
-                document.getElementById("ESP32_01_TogLED_02").checked = true;
-              } else if (myObj.LED_02 == "OFF") {
-                document.getElementById("ESP32_01_TogLED_02").checked = false;
-              }
+                
             }
           }
         };
-        xmlhttp.open("POST","getdata.php",true);
+        xmlhttp.open("POST","hola",true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send("id="+id);
 			}
-
 
 
  
